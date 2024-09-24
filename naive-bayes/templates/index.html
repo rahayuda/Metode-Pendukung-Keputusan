@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Cuaca</title>
+</head>
+<body>
+    <h1>Prediksi Cuaca dengan Naive Bayes</h1>
+    <form action="/predict" method="post">
+        <label for="payung">Apakah ada payung?</label>
+        <select name="payung" id="payung">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+        </select>
+        <br><br>
+        
+        <label for="topi">Apakah ada topi?</label>
+        <select name="topi" id="topi">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Prediksi Cuaca">
+    </form>
+
+    <h2>{{ prediksi }}</h2>
+</body>
+</html>
