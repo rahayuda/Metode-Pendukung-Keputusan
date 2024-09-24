@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+</head>
+<body>
+    <h1>Hasil Perhitungan Skor Laptop</h1>
+
+    <h2>Tabel Hasil</h2>
+    {{ table|safe }}
+
+    <h2>Alternatif Terbaik: {{ best_laptop }} dengan Skor {{ "%.2f" | format(best_score) }}</h2>
+
+    <h2>Grafik Skor</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Grafik Skor">
+
+    <br><br>
+    <a href="/">Kembali</a>
+</body>
+</html>

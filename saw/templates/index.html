@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan SAW Laptop</title>
+</head>
+<body>
+    <h1>Perhitungan Skor Laptop dengan SAW</h1>
+    <form action="/result" method="POST">
+        <label for="weight_harga">Bobot Harga (0-1):</label>
+        <input type="number" min="0" max="1" step="0.1" id="weight_harga" name="weight_harga" required><br><br>
+
+        <label for="weight_spesifikasi">Bobot Spesifikasi (0-1):</label>
+        <input type="number" min="0" max="1" step="0.1" id="weight_spesifikasi" name="weight_spesifikasi" required><br><br>
+
+        <label for="weight_berat">Bobot Berat (0-1):</label>
+        <input type="number" min="0" max="1" step="0.1" id="weight_berat" name="weight_berat" required><br><br>
+
+        <input type="submit" value="Hitung Skor">
+    </form>
+</body>
+</html>
