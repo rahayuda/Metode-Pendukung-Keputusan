@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 # Data
 data = {
-    'Jam_Studi': [2, 3, 4, 5, 6, 7, 8, 9, 10, 5],
-    'Skor_Ujian': [65, 70, 75, 80, 85, 90, 95, 100, 105, 82]
+    'Jam_Studi': [2, 3, 4, 5, 6, 7, 8, 9, 1, 5],
+    'Skor_Ujian': [65, 70, 75, 80, 85, 90, 95, 100, 60, 82]
 }
 
 # Membuat DataFrame
@@ -32,7 +32,8 @@ def index():
     if request.method == 'POST':
         try:
             jam_studi_input = float(request.form['jam_studi'])
-            prediksi_skor = model.predict(pd.DataFrame([[jam_studi_input]], columns=['Jam_Studi']))[0]
+            # Ubah prediksi skor ke integer
+            prediksi_skor = int(model.predict(pd.DataFrame([[jam_studi_input]], columns=['Jam_Studi']))[0])
 
             # Membuat grafik
             y_pred = model.predict(X)
