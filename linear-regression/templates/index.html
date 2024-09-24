@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Skor Ujian</title>
+</head>
+<body>
+    <h1>Prediksi Skor Ujian Matematika</h1>
+    <form method="post">
+        <label for="jam_studi">Masukkan jumlah jam studi:</label>
+        <input type="text" id="jam_studi" name="jam_studi" required>
+        <input type="submit" value="Prediksi">
+    </form>
+
+    {% if prediksi_skor is not none %}
+        <h2>Prediksi skor ujian untuk {{ jam_studi_input }} jam studi adalah: {{ prediksi_skor }}</h2>
+        {% if plot_url %}
+            <h3>Grafik Regresi:</h3>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Grafik Regresi">
+        {% endif %}
+    {% endif %}
+</body>
+</html>
